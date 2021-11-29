@@ -64,7 +64,8 @@ public class Bola extends GOval{
 			if (auxiliar.getY() + getHeight() >= posy || auxiliar.getY() <= posy){
 				dy = dy * -1;
 			}
-			ark.remove(auxiliar);
+			ark.miMarcador.incrementaMarcador(1);
+			ark.remove(auxiliar); //Borro el ladrillo
 			
 			noHaChocado = false;
 		}
