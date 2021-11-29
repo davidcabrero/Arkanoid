@@ -20,10 +20,12 @@ public class Bola extends GOval{
 	}
 	
 	public void muevete(Arkanoid ark){
-		//rebote con el suelo y techo
-		if (getY() > ark.getHeight() || getY() < 10){
+		//rebote con el techo
+		if (getY() < 10){
 			dy = dy * -1;
 		}
+		//Si la pelota da contra el suelo
+		//TODO
 		
 		//rebote con la pared dcha e izqda
 		if (getX()+getWidth() > ark.ANCHO_PANTALLA - 30 || getX() < 10){
@@ -64,6 +66,9 @@ public class Bola extends GOval{
 			if (auxiliar.getY() + getHeight() >= posy || auxiliar.getY() <= posy){
 				dy = dy * -1;
 			}
+			
+
+			//si la y de la pelota es menor que la y del cursor
 			ark.miMarcador.incrementaMarcador(1);
 			ark.remove(auxiliar); //Borro el ladrillo
 			
@@ -71,5 +76,10 @@ public class Bola extends GOval{
 		}
 		
 		return noHaChocado;
+	}
+
+	private void println(String string) {
+		// TODO Auto-generated method stub
+		
 	}
 }

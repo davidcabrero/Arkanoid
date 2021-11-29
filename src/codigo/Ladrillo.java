@@ -13,3 +13,4 @@ public class Ladrillo extends GRect{
 		setFilled(true);
 	}
 }
+

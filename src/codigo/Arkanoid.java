@@ -6,6 +6,7 @@ import java.awt.event.MouseEvent;
 import acm.graphics.GImage;
 import acm.graphics.GRect;
 import acm.program.GraphicsProgram;
+import acm.util.RandomGenerator;
 
 public class Arkanoid extends GraphicsProgram{
 	
@@ -46,13 +47,14 @@ public class Arkanoid extends GraphicsProgram{
 	}
 	
 	private void creaPiramide(){
+		RandomGenerator aleatorio = new RandomGenerator();
 		int numeroLadrillos = 13;
 		int desplazamiento_inicial_X = 20;
 		int desplazamiento_inicial_Y = 15;
 		
 		for (int j=0; j<numeroLadrillos; j++){
 			for (int i=j; i<numeroLadrillos; i++){
-				Ladrillo miLadrillo = new Ladrillo(ANCHO_LADRILLO*i - ANCHO_LADRILLO/2*j + desplazamiento_inicial_X, ALTO_LADRILLO*j + desplazamiento_inicial_Y,ANCHO_LADRILLO,ALTO_LADRILLO,Color.BLUE);
+				Ladrillo miLadrillo = new Ladrillo(ANCHO_LADRILLO*i - ANCHO_LADRILLO/2*j + desplazamiento_inicial_X, ALTO_LADRILLO*j + desplazamiento_inicial_Y,ANCHO_LADRILLO,ALTO_LADRILLO,aleatorio.nextColor());
 				add(miLadrillo);
 			}
 		}
