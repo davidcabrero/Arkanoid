@@ -25,7 +25,9 @@ public class Bola extends GOval{
 			dy = dy * -1;
 		}
 		//Si la pelota da contra el suelo
-		//TODO
+		if (getY() > ark.getHeight()){
+			//TODO 
+		}
 		
 		//rebote con la pared dcha e izqda
 		if (getX()+getWidth() > ark.ANCHO_PANTALLA - 30 || getX() < 10){

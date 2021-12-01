@@ -16,7 +16,7 @@ public class Arkanoid extends GraphicsProgram{
 	
 	Bola bola1 = new Bola(10,10, Color.BLUE);
 	//declaro el cursor del juego
-	Cursor miCursor = new Cursor(0, 400, 60, 10, Color.GREEN);
+	Cursor miCursor= new Cursor(400, 60, 12,"imagenes/cursor.png");
 	
 	GImage intro = new GImage("imagenes/intropic.png");
 	GImage fondo = new GImage("imagenes/arkanoidback.png");
@@ -44,7 +44,6 @@ public class Arkanoid extends GraphicsProgram{
 			bola1.muevete(this); //Paso el objeto arkanoid que se está ejecutando.
 			pause(5);
 			miCursor.muevete(ANCHO_PANTALLA - 30, (int) bola1.getX());
-				
 			}
 		}
 	
@@ -63,6 +62,6 @@ public class Arkanoid extends GraphicsProgram{
 				Ladrillo miLadrillo = new Ladrillo(ANCHO_LADRILLO*i - ANCHO_LADRILLO/2*j + desplazamiento_inicial_X, ALTO_LADRILLO*j + desplazamiento_inicial_Y,ANCHO_LADRILLO,ALTO_LADRILLO,aleatorio.nextColor());
 				add(miLadrillo);
 			}
-		}
+		} 
 	}
 }
