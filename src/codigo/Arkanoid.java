@@ -18,11 +18,16 @@ public class Arkanoid extends GraphicsProgram{
 	//declaro el cursor del juego
 	Cursor miCursor = new Cursor(0, 400, 60, 10, Color.GREEN);
 	
+	GImage intro = new GImage("imagenes/intropic.png");
 	GImage fondo = new GImage("imagenes/arkanoidback.png");
 	GRect fondoMarcador = new GRect(300, 600);
 	Marcador miMarcador = new Marcador(20, 40);
 	
 	public void init(){
+		intro.setSize(ANCHO_PANTALLA + 240, 500);
+		add(intro);
+		waitForClick();
+		remove(intro);
 		fondoMarcador.setFilled(true);
 		add(fondoMarcador, ANCHO_PANTALLA - 30,0);
 		add(fondo);
@@ -39,8 +44,9 @@ public class Arkanoid extends GraphicsProgram{
 			bola1.muevete(this); //Paso el objeto arkanoid que se está ejecutando.
 			pause(5);
 			miCursor.muevete(ANCHO_PANTALLA - 30, (int) bola1.getX());
+				
+			}
 		}
-	}
 	
 	public void mouseMoved(MouseEvent evento){
 		miCursor.muevete(getWidth(), evento.getX());
