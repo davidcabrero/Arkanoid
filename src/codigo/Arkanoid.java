@@ -47,7 +47,7 @@ public class Arkanoid extends GraphicsProgram{
 		while (true){
 			bola1.muevete(this); //paso el objeto arkanoid que se está ejecutando.
 			pause(2);
-			miCursor.muevete(ANCHO_PANTALLA - 30, (int) bola1.getX());
+			//miCursor.muevete(ANCHO_PANTALLA - 30, (int) bola1.getX()); //Añadir para juego automático.
  
 			if (bola1.getY() > miCursor.getY()){ //Si la pelota cae al suelo, pierdes
 				add(gameOver);
