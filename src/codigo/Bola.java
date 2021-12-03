@@ -1,3 +1,4 @@
+//Autor: David Cabrero Jim√©nez
 package codigo;
 
 import java.awt.Color;
@@ -24,10 +25,6 @@ public class Bola extends GOval{
 		if (getY() < 10){
 			dy = dy * -1;
 		}
-		//Si la pelota da contra el suelo
-		if (getY() > ark.getHeight()){
-			//TODO 
-		}
 		
 		//rebote con la pared dcha e izqda
 		if (getX()+getWidth() > ark.ANCHO_PANTALLA - 30 || getX() < 10){
@@ -46,7 +43,7 @@ public class Bola extends GOval{
 			
 		}
 		
-		//mueve la bola en la direcciÛn correcta
+		//mueve la bola en la direcci√≥n correcta
 		move(dx,dy);
 	}
 	
@@ -56,10 +53,10 @@ public class Bola extends GOval{
 		
 		auxiliar = ark.getElementAt(posx, posy);
 		
-		if (auxiliar == ark.miCursor){ //Si entra aquÌ es que choca con el cursor
+		if (auxiliar == ark.miCursor){ //Si entra aqu√≠ es que choca con el cursor
 			dy = dy * -1;
 			noHaChocado = false;
-		}else if (auxiliar == null){//si vale null es que no habÌa nada ahÌ
+		}else if (auxiliar == null){//si vale null es que no hab√≠a nada ah√≠
 			
 		}else if (auxiliar instanceof Ladrillo){ //si es un ladrillo
 			if (auxiliar.getX() + getWidth() >= posx || auxiliar.getX() <= posx){
@@ -79,9 +76,5 @@ public class Bola extends GOval{
 		
 		return noHaChocado;
 	}
-
-	private void println(String string) {
-		// TODO Auto-generated method stub
-		
-	}
+	
 }
