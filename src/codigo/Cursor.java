@@ -11,7 +11,7 @@ public class Cursor extends GImage {
 		setSize(width,height);
 		setLocation(0,posY);
 	}
-	
+
 	public void muevete(int anchoPantalla, int posX){
 		if(posX+getWidth() < anchoPantalla){
 			setLocation(posX, getY());

@@ -31,14 +31,14 @@ public class Marcador extends GRect{
 		texto2.setFont(new Font("Arial", Font.BOLD, 18));
 		texto.setFont(new Font("Arial", Font.BOLD, 18));
 	}
-	
+
 	public void incrementaMarcador(int puntos){
 		//suma el nº de puntos que se indica en la variable de puntos
 		//a la puntuación actual
 		puntuacion = puntuacion + puntos; //puntuación
 		texto.setLabel("" + puntuacion);
 	}
-	
+
 	public void addMarcador(Arkanoid arkanoid){
 		arkanoid.add(this, arkanoid.getWidth() - 100, 20);
 		arkanoid.add(texto, arkanoid.getWidth() - 100, 120); //puntos
