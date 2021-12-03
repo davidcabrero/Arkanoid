@@ -1,16 +1,15 @@
+//Autor: David Cabrero Jiménez
 package codigo;
 
 import java.awt.Color;
+import java.awt.Image;
 
-import acm.graphics.GRect;
+import acm.graphics.GImage;
 
-public class Ladrillo extends GRect{
-	
-	int numero_golpes = 0;
-	public Ladrillo(double x, double y, double width, double height, Color c) {
-		super(x, y, width, height);
-		setFillColor(c);
-		setFilled(true);
+public class Ladrillo extends GImage{
+
+	public Ladrillo(String name) {
+		super(name);
 	}
-}
 
+}
