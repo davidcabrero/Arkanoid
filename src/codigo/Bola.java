@@ -53,10 +53,12 @@ public class Bola extends GOval{
 		
 		auxiliar = ark.getElementAt(posx, posy);
 		
-		if (auxiliar == ark.miCursor){ //Si entra aquÃ­ es que choca con el cursor
+		if (auxiliar == ark.miCursor){ //Si entra aquí es que choca con el cursor
 			dy = dy * -1;
+			sonidoCursor _sonidoCursor=new sonidoCursor();
+			_sonidoCursor.start();
 			noHaChocado = false;
-		}else if (auxiliar == null){//si vale null es que no habÃ­a nada ahÃ­
+		}else if (auxiliar == null){//si vale null es que no había nada ahí
 			
 		}else if (auxiliar instanceof Ladrillo){ //si es un ladrillo
 			if (auxiliar.getX() + getWidth() >= posx || auxiliar.getX() <= posx){
@@ -70,11 +72,25 @@ public class Bola extends GOval{
 			//si la y de la pelota es menor que la y del cursor
 			ark.miMarcador.incrementaMarcador(1);
 			ark.remove(auxiliar); //Borro el ladrillo
-			
+			sonidoLadrillo _sonidoLadrillo=new sonidoLadrillo();
+			_sonidoLadrillo.start();
 			noHaChocado = false;
 		}
 		
 		return noHaChocado;
 	}
-	
+	public class sonidoCursor extends Thread {		//Sonido 
+		public void run() {                               
+			ReproducirSonidos s = new ReproducirSonidos();
+			s.sonido(s.getClass().getResource("../sound/sonido1.wav").getFile());
+		}
+	}
+	public class sonidoLadrillo extends Thread {	//Sonido											
+
+		public void run() {     
+			ReproducirSonidos s = new ReproducirSonidos(); 
+			s.sonido(s.getClass().getResource("../sound/sonido1.wav").getFile());
+		}
+	}
 }
+

@@ -6,7 +6,7 @@ import java.awt.Image;
 
 import acm.graphics.GImage;
 
-public class Ladrillo extends GImage{
+public class Ladrillo extends GImage{ //Para imagen Ladrillo
 
 	public Ladrillo(String name) {
 		super(name);

@@ -11,7 +11,7 @@ import acm.graphics.GLabel;
 import acm.graphics.GRect;
 
 public class Marcador extends GRect{
-	
+	//Imágenes y texto del marcador
 	GImage youWin = new GImage("imagenes/win.png");
 	GImage logo = new GImage("imagenes/logo.png");
 	GLabel texto2 = new GLabel("");
@@ -20,7 +20,8 @@ public class Marcador extends GRect{
 	GLabel titulo = new GLabel("");
 
 	public Marcador(double width, double height) {
-		super(width, height); //puntuaciÃ³n
+		super(width, height); //puntuación
+		//Estilos
 		setFilled(true);
 		setFillColor(Color.BLACK);
 		texto2.setLabel("Puntos: ");
@@ -32,9 +33,9 @@ public class Marcador extends GRect{
 	}
 	
 	public void incrementaMarcador(int puntos){
-		//suma el nÂº de puntos que se indica en la variable de puntos
-		//a la puntuaciÃ³n actual
-		puntuacion = puntuacion + puntos; //puntuaciÃ³n += puntos;
+		//suma el nº de puntos que se indica en la variable de puntos
+		//a la puntuación actual
+		puntuacion = puntuacion + puntos; //puntuación
 		texto.setLabel("" + puntuacion);
 	}
 	
@@ -42,7 +43,7 @@ public class Marcador extends GRect{
 		arkanoid.add(this, arkanoid.getWidth() - 100, 20);
 		arkanoid.add(texto, arkanoid.getWidth() - 100, 120); //puntos
 		arkanoid.add(logo, arkanoid.getWidth() - 250, 10); //Logo Arkanoid en el menÃº
-		arkanoid.add(texto2, arkanoid.getWidth() - 180, 120);	
+		arkanoid.add(texto2, arkanoid.getWidth() - 180, 120);	//Indicador de puntos
 	}
 
 }
