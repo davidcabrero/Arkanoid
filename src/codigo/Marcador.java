@@ -1,3 +1,4 @@
+//Autor: David Cabrero JimÃ©nez
 package codigo;
 
 import java.awt.Color;
@@ -11,6 +12,7 @@ import acm.graphics.GRect;
 
 public class Marcador extends GRect{
 	
+	GImage youWin = new GImage("imagenes/win.png");
 	GImage logo = new GImage("imagenes/logo.png");
 	GLabel texto2 = new GLabel("");
 	GLabel texto = new GLabel("");
@@ -18,7 +20,7 @@ public class Marcador extends GRect{
 	GLabel titulo = new GLabel("");
 
 	public Marcador(double width, double height) {
-		super(width, height); //puntuación
+		super(width, height); //puntuaciÃ³n
 		setFilled(true);
 		setFillColor(Color.BLACK);
 		texto2.setLabel("Puntos: ");
@@ -30,17 +32,17 @@ public class Marcador extends GRect{
 	}
 	
 	public void incrementaMarcador(int puntos){
-		//suma el nº de puntos que se indica en la variable de puntos
-		//a la puntuación actual
-		puntuacion = puntuacion + puntos; //puntuación += puntos;
+		//suma el nÂº de puntos que se indica en la variable de puntos
+		//a la puntuaciÃ³n actual
+		puntuacion = puntuacion + puntos; //puntuaciÃ³n += puntos;
 		texto.setLabel("" + puntuacion);
 	}
 	
 	public void addMarcador(Arkanoid arkanoid){
 		arkanoid.add(this, arkanoid.getWidth() - 100, 20);
 		arkanoid.add(texto, arkanoid.getWidth() - 100, 120); //puntos
-		arkanoid.add(logo, arkanoid.getWidth() - 250, 10); //Logo Arkanoid en el menú
-		arkanoid.add(texto2, arkanoid.getWidth() - 180, 120);
+		arkanoid.add(logo, arkanoid.getWidth() - 250, 10); //Logo Arkanoid en el menÃº
+		arkanoid.add(texto2, arkanoid.getWidth() - 180, 120);	
 	}
 
 }
