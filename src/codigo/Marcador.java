@@ -1,4 +1,4 @@
-//Autor: David Cabrero JimÃ©nez
+//Autor: David Cabrero Jiménez
 package codigo;
 
 import java.awt.Color;

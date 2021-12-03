@@ -1,4 +1,4 @@
-//Autor: David Cabrero Jim√©nez
+//Autor: David Cabrero JimÈnez
 package codigo;
  
 import java.awt.Color;
@@ -18,8 +18,8 @@ public class Arkanoid extends GraphicsProgram{
 	Bola bola1 = new Bola(10,10, Color.BLUE);
 	//declaro el cursor del juego
 	Cursor miCursor= new Cursor(400, 60, 12,"imagenes/cursor.png");
-	//im√°genes
-	GImage youWin = new GImage("imagenes/win.jpg");
+	//im·genes
+	GImage youWin = new GImage("imagenes/win.png");
 	GImage intro = new GImage("imagenes/intropic.png");
 	GImage fondo = new GImage("imagenes/arkanoidback.png");
 	GImage fondoMarcador = new GImage("imagenes/menu.jpg",300, 600);
@@ -45,8 +45,8 @@ public class Arkanoid extends GraphicsProgram{
 		miMarcador.addMarcador(this);//marcador.
  
 		while (true){
-			bola1.muevete(this); //paso el objeto arkanoid que se est√° ejecutando.
-			pause(0);
+			bola1.muevete(this); //paso el objeto arkanoid que se est· ejecutando.
+			pause(2);
 			miCursor.muevete(ANCHO_PANTALLA - 30, (int) bola1.getX());
  
 			if (bola1.getY() > miCursor.getY()){ //Si la pelota cae al suelo, pierdes
@@ -60,7 +60,7 @@ public class Arkanoid extends GraphicsProgram{
 				add(youWin);
 				waitForClick(); //Click para volver a empezar
 				removeAll(); //Eliminar todo
-				miMarcador.puntuacion = 0; //Restart puntuaci√≥n
+				miMarcador.puntuacion = 0; //Restart puntuaciÛn
 				init(); //Volver a empezar
 				run();
 			}
@@ -71,7 +71,7 @@ public class Arkanoid extends GraphicsProgram{
 		miCursor.muevete(ANCHO_PANTALLA - 30, evento.getX());
 	}
  
-	private void creaPiramide(){ //pir√°mide de ladrillos
+	private void creaPiramide(){ //pir·mide de ladrillos
 		int numeroLadrillos = 13;
 		int desplazamiento_inicial_X = 20;
 		int desplazamiento_inicial_Y = 15;
